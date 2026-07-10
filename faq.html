@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Grow Nova India - Premium Digital Curation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        luxuryWhite: '#ffffff',
+                        luxuryGray: '#f1f3f5',
+                        darkText: '#0e1117',
+                        goldAccent: '#b89447',
+                        mutedText: '#454b54'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #0e1117;
+            scroll-behavior: smooth;
+        }
+        
+        /* Premium Smooth Global Fade In Effect */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                        transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+            will-change: opacity, transform;
+        }
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ultra-Smooth Accordion UX Engine */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        .faq-item.active .faq-answer {
+            opacity: 1;
+        }
+        .faq-icon {
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        /* Interactive Glowing Cards */
+        .cta-card {
+            transition: transform 0.4s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                        box-shadow 0.4s cubic-bezier(0.215, 0.610, 0.355, 1),
+                        border-color 0.4s ease;
+            will-change: transform, box-shadow;
+        }
+        .cta-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(14, 17, 23, 0.05);
+            border-color: rgba(184, 148, 71, 0.35);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden antialiased">
+
+    <!-- Premium Minimal Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-darkText/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-[0.2em] text-darkText">
+                GROW NOVA<span class="text-goldAccent">.</span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-8 text-xs font-semibold tracking-[0.15em] items-center text-mutedText">
+                <a href="index.html" class="hover:text-darkText transition-colors">HOME</a>
+                <a href="work.html" class="hover:text-darkText transition-colors">WORK</a>
+                <a href="services.html" class="hover:text-darkText transition-colors">SERVICES</a>
+                <a href="careers.html" class="hover:text-darkText transition-colors">CAREERS</a>
+                <a href="faq.html" class="text-darkText border-b-2 border-goldAccent pb-1">FAQ</a>
+                <a href="contact.html" class="border border-darkText text-darkText hover:bg-darkText hover:text-white px-5 py-2 rounded-sm transition-all duration-300 flex items-center gap-2">
+                    GET IN TOUCH <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+            
+            <button id="menu-btn" class="lg:hidden text-xl focus:outline-none text-darkText" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="lg:hidden bg-white border-b border-darkText/10 px-6">
+            <div class="py-6 space-y-4 text-sm font-medium tracking-widest">
+                <a href="index.html" class="block text-mutedText hover:text-darkText">HOME</a>
+                <a href="work.html" class="block text-mutedText hover:text-darkText">WORK</a>
+                <a href="services.html" class="block text-mutedText hover:text-darkText">SERVICES</a>
+                <a href="careers.html" class="block text-mutedText hover:text-darkText">CAREERS</a>
+                <a href="faq.html" class="block text-goldAccent">FAQ</a>
+                <a href="contact.html" class="block text-center border border-darkText text-darkText py-2 rounded-sm mt-4">GET IN TOUCH</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-48 pb-20 bg-white relative">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(184,148,71,0.03),transparent_60%)]"></div>
+        <div class="max-w-4xl mx-auto text-center px-6 relative z-10 space-y-4">
+            <span class="text-xs uppercase tracking-[0.4em] font-semibold text-goldAccent block">Operational Intelligence</span>
+            <h1 class="font-serif text-4xl md:text-6xl text-darkText font-normal tracking-tight">
+                Frequently Asked <br><span class="italic font-light text-goldAccent">Questions.</span>
+            </h1>
+            <p class="text-mutedText text-sm md:text-base max-w-xl mx-auto font-normal leading-relaxed tracking-wide pt-2">
+                Our mathematical frameworks, domestic compliance guidelines, and deployment structures mapped out clearly for scale-driven Indian enterprises.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Layout -->
+    <section class="pb-32 px-6 max-w-4xl mx-auto space-y-12">
+        
+        <!-- CATEGORY 1: CORE STRATEGY -->
+        <div class="fade-in-section">
+            <h2 class="text-xs font-bold tracking-[0.3em] text-goldAccent uppercase mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-[10px]"></i> 01. Strategic Architecture
+            </h2>
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">How does Grow Nova differ from traditional talent management agencies in India?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-4 border-t border-darkText/5 pt-4">
+                            <p>Traditional talent agencies function as simple brokers operating out of standard static talent lists. Grow Nova entirely operates as an autonomous, data-centric **Creator Strategy Engine**.</p>
+                            <p>We do not manage individual talent directly, preventing conflict of interest. Instead, we scan the entire domestic creator map with data matrices, filtering parameters by consumer affinity metrics, audience drop-off markers, and regional conversion coefficients to pick purely optimal assets for your brand.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">What criteria determine a creator's alignment with an enterprise campaign?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>We skip vanity metrics like surface follow counts entirely. Our framework evaluates alignment based on three complex parameters:</p>
+                            <ul class="list-disc list-inside space-y-1 pl-2">
+                                <li><strong>Audience Purity Index:</strong> Verifying true active engagement thresholds across specific Indian demographic bands.</li>
+                                <li><strong>Historical Conversion Vector:</strong> Benchmarking real analytical performance indicators within localized target categories.</li>
+                                <li><strong>Creative Pacing Integrity:</strong> Testing retention durations to see if the creator's delivery patterns suit high-retention structured briefs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">What does "Retention Scripting Architecture" mean for brand briefs?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>Raw brand manuals often disrupt a short-form video's organic velocity. Our internal production desk reformats marketing mandates into custom-engineered script architectures.</p>
+                            <p>By incorporating psychological visual hooks in the initial 3 seconds, configuring clear narrative drop-offs at standard drop zones, and placing precise call-to-actions, we keep viewers engaged throughout the runtime while securing measurable conversions.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CATEGORY 2: REGIONAL DEPLOYMENT -->
+        <div class="fade-in-section">
+            <h2 class="text-xs font-bold tracking-[0.3em] text-goldAccent uppercase mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-earth-asia text-[10px]"></i> 02. Subcontinental Localization
+            </h2>
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">How does Grow Nova handle regional and vernacular language optimization?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>The domestic market demands localized nuance. We deploy focused campaigns across major vernacular ecosystems—including Hindi, Tamil, Telugu, Marathi, Kannada, and Bengali.</p>
+                            <p>We ensure cultural optimization by adjusting scripting hooks to reflect local idioms, humor, and lifestyle indicators, yielding deeper consumer trust in tier-2 and tier-3 regions than generalized English assets can offer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">Can your ecosystem scale distribution across distinct Tier-1, 2, and 3 demographics?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>Yes. Our ecosystem segregates our creator network to align perfectly with targeted income groups. Tier-1 focuses heavily on tech-centric, high-intent corporate groups via premium visual treatments.</p>
+                            <p>Simultaneously, our mass-market movers handle regional campaigns meant to optimize distribution for high-volume consumer apps and consumer packaged goods brands across wider domestic territories.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CATEGORY 3: COMPLIANCE & LEGAL -->
+        <div class="fade-in-section">
+            <h2 class="text-xs font-bold tracking-[0.3em] text-goldAccent uppercase mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-scale-balanced text-[10px]"></i> 03. Regulatory & Compliance Frameworks
+            </h2>
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">How are ASCI influencer guidelines managed across decentralized creators?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>Non-compliance presents a material risk to premium enterprises. Our in-house compliance department filters out creative assets that bypass standard legal requirements.</p>
+                            <p>Every campaign asset undergoes multi-stage technical screening to verify clear label disclosures, native tag configurations, and proper text placements matching current ASCI mandates before publication approvals are initialized.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">What internal steps protect our corporate intellectual property and usage rights?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>All active engagements require pre-negotiated legal master service documentation. Our boilerplate agreements structurally lock in asset ownership rules, content amplification rights, performance clauses, and brand exclusivity windows.</p>
+                            <p>This strict structure completely eliminates unexpected copyright disputes, securing long-term usage protections across digital media performance ecosystems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">How does the billing, domestic GST invoicing, and financial framework operate?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>We operate under unified institutional invoicing structures. Enterprises bypass dealing with multiple chaotic independent creator invoices entirely.</p>
+                            <p>You receive one single comprehensive invoice featuring clear corporate GST documentation, itemized cost breakdowns, and transparent operational allocations, keeping fiscal processing completely seamless for internal audits.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CATEGORY 4: ANALYTICS & ROI -->
+        <div class="fade-in-section">
+            <h2 class="text-xs font-bold tracking-[0.3em] text-goldAccent uppercase mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-chart-pie text-[10px]"></i> 04. Attribution & Data Governance
+            </h2>
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 9 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">How does Grow Nova accurately verify and prevent fraudulent impression data?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>Vanity metrics can easily be artificially inflated. Our infrastructure continuously reads deep data indicators including engagement-to-follower balances, real comment distribution profiles, and structural view velocity trends.</p>
+                            <p>Any account showing bot patterns or automated performance spikes is immediately isolated and permanently blacklisted from our deployment pipelines, ensuring clean spending protection.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">What specific conversion indicators are accessible inside the enterprise dashboard?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>Our custom-built analytics environment moves past vague summaries, recording actionable transactional data points directly:</p>
+                            <ul class="list-disc list-inside space-y-1 pl-2">
+                                <li><strong>True Link Click-Through-Rates (CTR):</strong> Granular analysis of outbound tracking link engagement.</li>
+                                <li><strong>Average View-Retention Thresholds:</strong> Pinpointing the exact relative millisecond of user interest drop-off.</li>
+                                <li><strong>Acquisition Path Mapping:</strong> Verifying cross-border geographic origin signals and deep device demographic variables.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 11 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">What typical timeline structures govern a standard deployment cycle?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>A flawless multi-asset orchestration usually requires a structured 3-to-4 week pipeline. Week 1 is reserved for mapping target demographics and isolating creator configurations. Week 2 manages script processing and compliance screenings.</p>
+                            <p>Week 3 moves into active video production, followed by final adjustments and coordinated rollout tracking in Week 4.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 12 -->
+                <div class="faq-item border border-darkText/10 rounded-sm bg-white overflow-hidden transition-colors duration-300 hover:border-darkText/20">
+                    <button class="faq-trigger w-full px-6 py-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-serif text-base md:text-lg text-darkText font-semibold tracking-wide pr-4">How do minimum commitment requirements work for brand integrations?</span>
+                        <span class="faq-icon text-goldAccent text-sm flex-shrink-0"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-mutedText text-xs md:text-sm leading-relaxed font-normal tracking-wide space-y-2 border-t border-darkText/5 pt-4">
+                            <p>Because structural testing, script formatting, dashboard adjustments, and matching operations carry significant layout overheads, we intentionally build alignments at enterprise scale.</p>
+                            <p>Our frameworks operate on customized quarterly project roadmaps, allowing our data engines to gather clean performance insights and scale distribution safely.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Continuous Query CTA -->
+    <section class="py-24 bg-luxuryGray border-t border-darkText/10 px-6 fade-in-section">
+        <div class="max-w-4xl mx-auto bg-white border border-darkText/10 rounded-sm p-8 md:p-12 text-center cta-card">
+            <h2 class="font-serif text-2xl md:text-3xl text-darkText mb-3">Still have unanswered questions?</h2>
+            <p class="text-mutedText text-xs md:text-sm max-w-lg mx-auto leading-relaxed mb-8">Our execution architects are available to break down deep deployment logistics, compliance, and custom regional strategies specific to your fiscal roadmap.</p>
+            <a href="contact.html" class="inline-flex bg-darkText hover:bg-neutral-800 text-white font-medium tracking-widest text-xs uppercase px-8 py-4 transition-all duration-300 rounded-sm shadow-md gap-2 items-center">
+                Connect With An Architect <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Classic Sophisticated Footer -->
+    <footer class="bg-white border-t border-darkText/10 py-16 px-6 text-center text-xs text-mutedText tracking-widest space-y-6">
+        <p class="font-bold tracking-[0.3em] text-darkText text-sm">GROW NOVA</p>
+        <div class="flex justify-center space-x-8 text-sm text-darkText/70">
+            <a href="#" class="hover:text-goldAccent transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-goldAccent transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-goldAccent transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="text-[10px] text-darkText/40 font-normal tracking-normal">&copy; 2026 Grow Nova India. Premium Digital Curation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            menuIcon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars-staggered";
+        });
+
+        // Elite Accordion Toggle Logic & Global Smooth Scroll Observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const fadeSections = document.querySelectorAll('.fade-in-section');
+
+            faqItems.forEach(item => {
+                const trigger = item.querySelector('.faq-trigger');
+                const answer = item.querySelector('.faq-answer');
+
+                trigger.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all active items for a clean executive layout look
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                        i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+                    });
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                        trigger.setAttribute('aria-expanded', 'true');
+                        // Accurate dynamic scrollHeight calculation for smooth accordion flow
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // Smooth Intersection Observer for elegant page reveal
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.08 }); // Trigger slightly earlier for high-pacing scrollers
+
+            fadeSections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>

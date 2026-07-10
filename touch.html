@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get In Touch | Grow Nova India - Premium Digital Curation</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        luxuryWhite: '#ffffff',
+                        luxuryGray: '#f1f3f5',
+                        darkText: '#0e1117',
+                        goldAccent: '#b89447',
+                        mutedText: '#454b54'
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #ffffff;
+            color: #0e1117;
+            scroll-behavior: smooth;
+        }
+        
+        /* Premium Global Fade In Scroll Animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                        transform 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+            will-change: opacity, transform;
+        }
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Unique Luxury Letter Reveal Effects */
+        .reveal-text span {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            display: inline-block;
+        }
+        .fade-in-section.visible .reveal-text span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Premium Smooth UX Card Interactions */
+        .contact-card {
+            transition: transform 0.4s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                        box-shadow 0.4s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                        border-color 0.4s ease;
+            will-change: transform, box-shadow;
+        }
+        .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px rgba(14, 17, 23, 0.04);
+            border-color: rgba(184, 148, 71, 0.35);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden antialiased">
+<!-- Premium Minimal Navbar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-darkText/10">
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+<a class="text-xl font-bold tracking-[0.2em] text-darkText" href="index.html">
+                GROW NOVA<span class="text-goldAccent">.</span>
+</a>
+<div class="hidden lg:flex space-x-8 text-xs font-semibold tracking-[0.15em] items-center text-mutedText">
+<a class="hover:text-darkText transition-colors" href="index.html">HOME</a>
+<a class="hover:text-darkText transition-colors" href="work.html">WORK</a>
+<a class="hover:text-darkText transition-colors" href="services.html">SERVICES</a>
+<a class="hover:text-darkText transition-colors" href="careers.html">CAREERS</a>
+<a class="hover:text-darkText transition-colors" href="faq.html">FAQ</a>
+<a class="text-darkText border-b-2 border-goldAccent pb-1" href="contact.html">GET IN TOUCH</a>
+</div>
+<button aria-label="Toggle Navigation" class="lg:hidden text-xl focus:outline-none text-darkText" id="menu-btn">
+<i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
+</button>
+</div>
+<!-- Mobile Drawer Navigation -->
+<div class="lg:hidden bg-white border-b border-darkText/10 px-6" id="mobile-menu">
+<div class="py-6 space-y-4 text-sm font-medium tracking-widest">
+<a class="block text-mutedText hover:text-darkText" href="index.html">HOME</a>
+<a class="block text-mutedText hover:text-darkText" href="work.html">WORK</a>
+<a class="block text-mutedText hover:text-darkText" href="services.html">SERVICES</a>
+<a class="block text-mutedText hover:text-darkText" href="careers.html">CAREERS</a>
+<a class="block text-mutedText hover:text-darkText" href="faq.html">FAQ</a>
+<a class="block text-goldAccent" href="contact.html">GET IN TOUCH</a>
+</div>
+</div>
+</nav>
+<!-- Header Section -->
+<section class="pt-48 pb-20 bg-white relative">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(184,148,71,0.03),transparent_60%)]"></div>
+<div class="max-w-5xl mx-auto text-center px-6 relative z-10 space-y-4">
+<span class="text-xs uppercase tracking-[0.4em] font-semibold text-goldAccent block">Strategic Alignment</span>
+<h1 class="font-serif text-4xl md:text-6xl lg:text-7xl text-darkText font-normal tracking-tight leading-tight">
+                Initiate your brand’s <br/><span class="italic font-light text-goldAccent">cultural expansion.</span>
+</h1>
+<p class="text-mutedText text-sm md:text-base max-w-xl mx-auto font-normal leading-relaxed tracking-wide pt-2">
+                Connect directly with our implementation architects. We map metrics, bypass vanity networks, and co-author high-retention frameworks engineered exclusively for enterprise scale.
+            </p>
+</div>
+</section>
+<!-- Section 2: Quick Communication Channels Matrix -->
+<section class="py-24 max-w-7xl mx-auto px-6 fade-in-section">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 border border-darkText/10 rounded-sm bg-white space-y-4 shadow-sm contact-card text-center">
+<div class="text-goldAccent text-xl"><i class="fa-solid fa-building-shield"></i></div>
+<h3 class="font-serif text-lg text-darkText tracking-wide">Enterprise Partnerships</h3>
+<p class="text-mutedText text-xs leading-relaxed max-w-xs mx-auto">For Indian enterprises, hyper-growth startups, and fast-moving D2C brands seeking metrics-driven deployment roadmaps.</p>
+<div class="pt-4">
+<a class="text-xs font-bold text-darkText border-b border-darkText pb-0.5 hover:text-goldAccent hover:border-goldAccent transition-colors" href="mailto:partners@grownova.in">partners@grownova.in</a>
+</div>
+</div>
+<div class="p-8 border border-darkText/10 rounded-sm bg-white space-y-4 shadow-sm contact-card text-center">
+<div class="text-goldAccent text-xl"><i class="fa-solid fa-users-viewfinder"></i></div>
+<h3 class="font-serif text-lg text-darkText tracking-wide">Creator Onboarding</h3>
+<p class="text-mutedText text-xs leading-relaxed max-w-xs mx-auto">For high-retention, specialized tastemakers and high-intent niche creators within the subcontinental map.</p>
+<div class="pt-4">
+<a class="text-xs font-bold text-darkText border-b border-darkText pb-0.5 hover:text-goldAccent hover:border-goldAccent transition-colors" href="mailto:network@grownova.in">network@grownova.in</a>
+</div>
+</div>
+<div class="p-8 border border-darkText/10 rounded-sm bg-white space-y-4 shadow-sm contact-card text-center">
+<div class="text-goldAccent text-xl"><i class="fa-solid fa-feather-pointed"></i></div>
+<h3 class="font-serif text-lg text-darkText tracking-wide">Media &amp; Governance</h3>
+<p class="text-mutedText text-xs leading-relaxed max-w-xs mx-auto">For compliance audits, academic research queries, and institutional brand integration communications.</p>
+<div class="pt-4">
+<a class="text-xs font-bold text-darkText border-b border-darkText pb-0.5 hover:text-goldAccent hover:border-goldAccent transition-colors" href="mailto:office@grownova.in">office@grownova.in</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Deep Corporate Discovery Intake Form Hub -->
+<section class="py-32 bg-luxuryGray border-y border-darkText/10 px-6 fade-in-section">
+<div class="max-w-3xl mx-auto bg-white border border-darkText/10 rounded-sm p-8 md:p-12 shadow-sm contact-card">
+<div class="text-center mb-12 space-y-2">
+<span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-bold">Intake Matrix</span>
+<h3 class="font-serif text-2xl md:text-3xl text-darkText">Submit Your Strategic Brief</h3>
+<p class="text-mutedText text-xs max-w-md mx-auto leading-relaxed pt-1">Provide your initial corporate parameters. This information maps directly to our initial evaluation architecture blueprints.</p>
+</div>
+<form action="https://api.web3forms.com/submit" class="space-y-6" method="POST"><input name="access_key" type="hidden" value="35e152fe-1688-41ea-973d-7f0bcdd5db63"/>
+<!-- Group 1 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2 text-left">
+<label class="text-[10px] uppercase font-bold tracking-widest text-mutedText">Corporate Name *</label>
+<input class="w-full bg-luxuryGray border border-darkText/10 text-xs px-4 py-3.5 focus:outline-none focus:border-goldAccent rounded-xs" name="company_name" placeholder="e.g. Acme Consumer Products" required="" type="text"/>
+</div>
+<div class="space-y-2 text-left">
+<label class="text-[10px] uppercase font-bold tracking-widest text-mutedText">Corporate Website URL *</label>
+<input class="w-full bg-luxuryGray border border-darkText/10 text-xs px-4 py-3.5 focus:outline-none focus:border-goldAccent rounded-xs" name="website" placeholder="e.g. https://domain.in" required="" type="url"/>
+</div>
+</div>
+<!-- Group 2 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2 text-left">
+<label class="text-[10px] uppercase font-bold tracking-widest text-mutedText">Authorized Contact Person *</label>
+<input class="w-full bg-luxuryGray border border-darkText/10 text-xs px-4 py-3.5 focus:outline-none focus:border-goldAccent rounded-xs" name="contact_person" placeholder="e.g. Vikram Malhotra" required="" type="text"/>
+</div>
+<div class="space-y-2 text-left">
+<label class="text-[10px] uppercase font-bold tracking-widest text-mutedText">Corporate Email Vector *</label>
+<input class="w-full bg-luxuryGray border border-darkText/10 text-xs px-4 py-3.5 focus:outline-none focus:border-goldAccent rounded-xs" name="email" placeholder="e.g. v.malhotra@domain.in" required="" type="email"/>
+</div>
+</div>
+<!-- Group 3 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2 text-left">
+<label class="text-[10px] uppercase font-bold tracking-widest text-mutedText">Target Domestic Audience Focus *</label>
+<select class="w-full bg-luxuryGray border border-darkText/10 text-xs px-4 py-3.5 focus:outline-none focus:border-goldAccent rounded-xs text-mutedText" name="audience" required="">
+<option value="">Select demographic tier</option>
+<option value="t1">Tier 1 Elite (High-intent Premium Groups)</option>
+<option value="t2">Tier 2 / Tier 3 Vernacular Ecosystems</option>
+<option value="pan">Pan-India Mass Consumer Marketplace</option>
+</select>
+</div>
+<div class="space-y-2 text-left">
+<label class="text-[10px] uppercase font-bold tracking-widest text-mutedText">Estimated Quarterly Performance Budget *</label>
+<select class="w-full bg-luxuryGray border border-darkText/10 text-xs px-4 py-3.5 focus:outline-none focus:border-goldAccent rounded-xs text-mutedText" name="budget" required="">
+<option value="">Select capital allocation band</option>
+<option value="b1">₹5 Lakhs – ₹15 Lakhs</option>
+<option value="b2">₹15 Lakhs – ₹50 Lakhs</option>
+<option value="b3">₹50 Lakhs – ₹1 Crore+</option>
+</select>
+</div>
+</div>
+<!-- Detailed Parameters text area -->
+<div class="space-y-2 text-left">
+<label class="text-[10px] uppercase font-bold tracking-widest text-mutedText">Outline your primary performance indicators or conversion blockers *</label>
+<textarea class="w-full bg-luxuryGray border border-darkText/10 text-xs p-4 focus:outline-none focus:border-goldAccent rounded-xs text-darkText" name="message" placeholder="Detail past acquisition tracking hurdles, desired brand alignment specifications, retention metrics goals..." required="" rows="5"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-darkText hover:bg-neutral-800 text-white font-medium tracking-widest text-xs uppercase py-4 transition-all duration-300 rounded-sm shadow-md" type="submit">Transmit Corporate Parameters</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Section 4: Subcontinental Hub Operations -->
+<section class="py-32 px-6 max-w-6xl mx-auto fade-in-section">
+<div class="text-center mb-20 space-y-2">
+<span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-bold">Workspace Framework</span>
+<h2 class="font-serif text-3xl md:text-5xl text-darkText">Our Domestic Headquarters</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+<!-- Hub 1 -->
+<div class="space-y-4 border-l-2 border-darkText/10 pl-6 py-2 transition-colors hover:border-goldAccent duration-300">
+<span class="text-xs uppercase tracking-widest text-goldAccent font-bold block reveal-text">01. BENGALURU</span>
+<h4 class="font-serif text-xl text-darkText">The Engineering Center</h4>
+<p class="text-mutedText text-xs md:text-sm font-normal leading-relaxed">
+                    Level 5, Prestige Tech Quadrant,<br/>
+                    Marathahalli-Sarjapur Outer Ring Road,<br/>
+                    Bengaluru, KA 560103
+                </p>
+<span class="text-[11px] font-bold text-darkText block tracking-wider pt-2"><i class="fa-solid fa-clock text-[10px] text-goldAccent mr-1"></i> 09:30 – 18:30 IST</span>
+</div>
+<!-- Hub 2 -->
+<div class="space-y-4 border-l-2 border-darkText/10 pl-6 py-2 transition-colors hover:border-goldAccent duration-300">
+<span class="text-xs uppercase tracking-widest text-goldAccent font-bold block reveal-text">02. MUMBAI</span>
+<h4 class="font-serif text-xl text-darkText">The Commercial Desk</h4>
+<p class="text-mutedText text-xs md:text-sm font-normal leading-relaxed">
+                    Executive Suite 12, Maker Chambers VII,<br/>
+                    Nariman Point,<br/>
+                    Mumbai, MH 400021
+                </p>
+<span class="text-[11px] font-bold text-darkText block tracking-wider pt-2"><i class="fa-solid fa-clock text-[10px] text-goldAccent mr-1"></i> 09:30 – 18:30 IST</span>
+</div>
+<!-- Hub 3 -->
+<div class="space-y-4 border-l-2 border-darkText/10 pl-6 py-2 transition-colors hover:border-goldAccent duration-300">
+<span class="text-xs uppercase tracking-widest text-goldAccent font-bold block reveal-text">03. DELHI NCR</span>
+<h4 class="font-serif text-xl text-darkText">The Operations Office</h4>
+<p class="text-mutedText text-xs md:text-sm font-normal leading-relaxed">
+                    Tower B, Cyber Greens Workspace,<br/>
+                    DLF Phase 3, Sector 25A,<br/>
+                    Gurugram, HR 122002
+                </p>
+<span class="text-[11px] font-bold text-darkText block tracking-wider pt-2"><i class="fa-solid fa-clock text-[10px] text-goldAccent mr-1"></i> 09:30 – 18:30 IST</span>
+</div>
+</div>
+</section>
+<!-- Classic Sophisticated Footer -->
+<footer class="bg-white border-t border-darkText/10 py-16 px-6 text-center text-xs text-mutedText tracking-widest space-y-6">
+<p class="font-bold tracking-[0.3em] text-darkText text-sm">GROW NOVA</p>
+<div class="flex justify-center space-x-8 text-sm text-darkText/70">
+<a aria-label="LinkedIn" class="hover:text-goldAccent transition-colors" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+<a aria-label="Instagram" class="hover:text-goldAccent transition-colors" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a aria-label="YouTube" class="hover:text-goldAccent transition-colors" href="#"><i class="fa-brands fa-youtube"></i></a>
+</div>
+<p class="text-[10px] text-darkText/40 font-normal tracking-normal">© 2026 Grow Nova India. Premium Digital Curation. All rights reserved.</p>
+</footer>
+<script>
+        // Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            menuIcon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars-staggered";
+        });
+
+        // Advanced Intersection Observer Engine for Fading & Letter Splitting Reveal
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeSections = document.querySelectorAll('.fade-in-section');
+            const textReveals = document.querySelectorAll('.reveal-text');
+
+            // Split typography parameters systematically for premium stagger reveals
+            textReveals.forEach(el => {
+                const text = el.innerText;
+                el.innerHTML = '';
+                text.split('').forEach((char, idx) => {
+                    const span = document.createElement('span');
+                    span.innerText = char === ' ' ? '\u00A0' : char; // Retain whitespace handling gracefully
+                    span.style.transitionDelay = `${idx * 0.03}s`;
+                    el.appendChild(span);
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.08 }); // Trigger early on deep scroll viewports
+
+            fadeSections.forEach(s => observer.observe(s));
+        });
+    </script>
+</body>
+</html>
